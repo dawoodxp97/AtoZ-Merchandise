@@ -1,0 +1,116 @@
+.secnav {
+  height: 40px;
+  width: 100%;
+  background-color: #121d25;
+  border-top: 1px solid grey;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  display: none;
+}
+.secnav_item1 {
+  height: 28px;
+  width: auto;
+  background-color: #2d3c4c;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 10px;
+  color: #ff9900;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+}
+.secnav_item1 > .MuiSvgIcon-root {
+  margin-left: 2px;
+  font-size: medium;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+}
+.secnav_item1 > h4 {
+  font-size: small;
+  margin-left: 4px;
+  margin-right: 5px;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+}
+.secnav_item2 {
+  height: 30px;
+  width: auto;
+  margin-top: 2px;
+  background-color: #2d3c4c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: #ff9900;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+  cursor: pointer;
+}
+.secnav_item2 > h4 {
+  font-size: small;
+  margin-left: 4px;
+  margin-right: 5px;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+}
+.secnav_item3 {
+  height: 30px;
+  width: auto;
+  margin-top: 4px;
+  background-color: #2d3c4c;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  color: #ff9900;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+  cursor: pointer;
+}
+.secnav_item3 > h4 {
+  font-size: small;
+  margin-left: 4px;
+  margin-right: 5px;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+}
+.secnav_logout {
+  flex: 0.1;
+  height: 30px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #2d3c4c;
+  border-radius: 12px;
+}
+.secnav_logout > p {
+  color: #ff9900;
+  font-weight: 600;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+}
+#secnav_logout_logo {
+  color: #ff9900;
+  height: 20px;
+  width: 20px;
+  margin-left: -1px;
+  margin-right: 5px;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+}
+/* Responsiveness for iPad */
+
+@media only screen and (max-width: 768px) and (max-height: 1024px) {
+  .secnav {
+    display: block;
+    display: flex;
+  }
+  .secnav_logout > p {
+    font-size: 10px;
+    margin-right: 5px;
+  }
+  #secnav_logout_logo {
+    font-size: smaller;
+  }
+}
+
+/* Responsiveness for iPhone 6/7/8 Plus */
+
+@media only screen and (max-width: 414px) and (max-height: 736px) {
+  .secnav {
+    display: none;
+  }
+}

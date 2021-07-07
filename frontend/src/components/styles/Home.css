@@ -1,0 +1,197 @@
+.home {
+  display: flex;
+  height: 90%;
+}
+.sidebar {
+  background-color: #161d25;
+
+  width: 16%;
+
+  border-bottom-left-radius: 20px;
+  border-top: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  width: 86%;
+  height: auto;
+  overflow-y: scroll;
+}
+.sidebar_items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 8%;
+  margin-left: 10%;
+  flex: 0.9;
+}
+
+.logout {
+  flex: 0.1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.logout > p {
+  font-weight: 600;
+}
+.sidebar_items_head {
+  height: 30px;
+  width: 90%;
+  background-color: #2d3c4c;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 10px;
+  color: #ff9900;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+}
+.sidebar_items_head > .MuiSvgIcon-root {
+  padding-left: 8px;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+}
+.sidebar_items_head > h4 {
+  padding-left: 5px;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+}
+.sidebar_sub_items_body {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12%;
+}
+.sidebar_sub_item {
+  height: 25px;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 2px;
+  color: #ccced0;
+  cursor: pointer;
+}
+.sidebar_sub_item > h6 {
+  margin-left: 15px;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+}
+.sidebar_sub_item:hover {
+  color: #000000;
+  background-color: #ff9900;
+  transition: 0.1s ease-in-out;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+}
+.sidebar_item1 {
+  height: 30px;
+  width: 90%;
+  margin-top: 2px;
+  background-color: #2d3c4c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: #ff9900;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+  cursor: pointer;
+}
+
+.sidebar_item1 > h4 {
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+}
+.sidebar_item2 {
+  height: 30px;
+  width: 90%;
+  margin-top: 4px;
+  background-color: #2d3c4c;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  color: #ff9900;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+  cursor: pointer;
+}
+.sidebar_item2 > h4 {
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+}
+.sidebar_item1 > .MuiSvgIcon-root {
+  margin-right: 5px;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+}
+.sidebar_item2 > .MuiSvgIcon-root {
+  margin-left: 10px;
+  margin-right: 4px;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+}
+#logout_logo {
+  height: 20px;
+  width: 20px;
+  margin-left: -10px;
+  margin-right: 5px;
+}
+
+/* Responsiveness for iPad Pro */
+
+@media only screen and (max-width: 1024px) and (max-height: 1366px) {
+  .home {
+    height: 100%;
+  }
+  .sidebar {
+    height: 48.55vh;
+  }
+  .sidebar_item1 {
+    width: 130px;
+  }
+  .sidebar_item1 > h4 {
+    font-size: 12px;
+  }
+  .sidebar_item2 {
+    width: 130px;
+  }
+  .sidebar_item2 > h4 {
+    font-size: 13px;
+  }
+  .sidebar_item2 > .MuiSvgIcon-root {
+    font-size: 20px;
+  }
+  .sidebar_item1 > .MuiSvgIcon-root {
+    font-size: 20px;
+  }
+  .sidebar_items_head {
+    width: 130px;
+  }
+  .sidebar_items_head > h4 {
+    font-size: 15px;
+  }
+  .sidebar_items_head > .MuiSvgIcon-root {
+    font-size: 20px;
+  }
+  .sidebar_sub_item {
+    height: 30px;
+    width: 150px;
+  }
+  .sidebar_sub_item > h6 {
+    font-size: 12px;
+    margin-left: 0;
+  }
+  .sidebar_sub_items_body {
+    margin-left: 5%;
+  }
+}
+
+/* Responsiveness for iPad */
+
+@media only screen and (max-width: 768px) and (max-height: 1024px) {
+  .sidebar {
+    display: none;
+  }
+  .main {
+    width: 100%;
+  }
+}
+
+/* Responsiveness for iPhone 6/7/8 Plus */
+
+@media only screen and (max-width: 414px) and (max-height: 736px) {
+  .main {
+    width: 100%;
+  }
+}

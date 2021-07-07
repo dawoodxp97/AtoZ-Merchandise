@@ -1,0 +1,20 @@
+.order {
+  padding: 40px;
+  margin: 20px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  background-color: white;
+  position: relative;
+  overflow: scroll;
+  height: 420px;
+  filter: drop-shadow(0px 0px 2px rgb(0 0 0/0.4));
+}
+.order_id {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+}
+.order_total {
+  font-weight: 500;
+  text-align: right;
+}

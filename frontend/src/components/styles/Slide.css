@@ -1,0 +1,44 @@
+.each-slide > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 200px;
+}
+
+.slide_1 > img {
+  border-radius: 25px;
+  height: 180px;
+  width: 95%;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+}
+.slide_2 > img {
+  border-radius: 25px;
+  height: 180px;
+  width: 98%;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+}
+.slide_3 > img {
+  border-radius: 25px;
+  height: 180px;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+  width: 98%;
+}
+.slide_4 > img {
+  border-radius: 25px;
+  height: 180px;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+  width: 98%;
+}
+.slide_5 > img {
+  border-radius: 25px;
+  height: 180px;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+  width: 98%;
+}
+.slide_6 > img {
+  border-radius: 25px;
+  height: 180px;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+  width: 98%;
+}

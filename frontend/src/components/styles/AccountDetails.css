@@ -1,0 +1,63 @@
+input {
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.account_details {
+  color: #121d25;
+  display: flex;
+  align-items: center;
+}
+.account_details_grp1 {
+  border-radius: 15px;
+  padding: 10px;
+  margin: 15px;
+  flex: 0.6;
+  background-color: white;
+  height: 500px;
+  filter: drop-shadow(1px 1px 2px rgb(0 0 0/0.4));
+}
+.account_details_grp1 > h3 {
+  filter: drop-shadow(1px 1px 1px rgb(0 0 0/0.4));
+}
+.account_details_grp2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0.4;
+  filter: drop-shadow(1px 1px 2px rgb(0 0 0/0.4));
+}
+.account_details_grp1 > img {
+  height: 250px;
+  width: 250px;
+  border-radius: 130px;
+  filter: drop-shadow(1px 1px 1px rgb(0 0 0/0.4));
+  border: 2px solid #ff9900;
+}
+.account_details_grp2 > form {
+  border-radius: 20px;
+  padding: 20px;
+  width: 300px;
+  height: 250px;
+  background-color: white;
+}
+.account_details_grp2 > form > input {
+  font-weight: 550;
+  background-color: #f2f2f5;
+  height: 25px;
+  border-radius: 5px;
+  filter: drop-shadow(1px 1px 2px rgb(0 0 0/0.4));
+}
+.account_details_grp2 > form > h5 {
+  filter: drop-shadow(1px 1px 1px rgb(0 0 0/0.4));
+}
+.account_details_grp2 > form > button {
+  border: none;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-left: 10px;
+  height: 28px;
+  background-color: #ff9900;
+  filter: drop-shadow(1px 1px 2px rgb(0 0 0/0.4));
+}
