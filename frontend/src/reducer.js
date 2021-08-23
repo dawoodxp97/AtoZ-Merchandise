@@ -36,6 +36,12 @@ const reducer = (state, action) => {
         ...state,
         user: action.user,
       };
+    case "SET_ADD":
+      return {
+        ...state,
+        address: action.address,
+      }
+    
     default:
       return state;
   }

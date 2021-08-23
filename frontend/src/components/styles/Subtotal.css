@@ -25,3 +25,7 @@
   font-weight: bold;
   cursor: pointer;
 }
+.subtotal > button:disabled {
+  cursor: not-allowed;
+  pointer-events: all !important;
+}

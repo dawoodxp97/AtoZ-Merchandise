@@ -37,3 +37,15 @@
 .payment_address {
   flex: 0.8;
 }
+.payment_price_container > button {
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: #ff9900;
+  filter: drop-shadow(1px 1px 2px rgb(0 0 0/0.4)); 
+}
+.payment_price_container > button:disabled {
+  cursor: not-allowed;
+  pointer-events: all !important;
+}

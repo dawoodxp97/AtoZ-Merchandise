@@ -11,17 +11,19 @@ function Checkout() {
         <div>
           <h3>Hello, {user?.displayName}</h3>
           <h2 className="checkout_title">Your Shopping Cart</h2>
-          <div className="basket_items">
-            {basket.map((item) => (
-              <CheckoutProduct
-                id={item.id}
-                title={item.title}
-                image={item.image}
-                price={item.price}
-                rating={item.rating}
-              />
-            ))}
-          </div>
+          {!basket.length ? "" : 
+            <div className="basket_items">
+              {basket.map((item) => (
+                <CheckoutProduct
+                  id={item.id}
+                  title={item.title}
+                  image={item.image}
+                  price={item.price}
+                  rating={item.rating}
+                />
+              ))}
+            </div>
+          }
         </div>
       </div>
       <div className="checkout_right">

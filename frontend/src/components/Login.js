@@ -50,22 +50,22 @@ function Login() {
           <h5>E-mail</h5>
           <input
             type="text"
+            multiple
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value.trimStart())}
           />
-
           <h5>Password</h5>
           <input
             type="password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value.trimStart())}
           />
           <p>
             By signing-in you agree to the A to Z MERCHANDISE Conditions of Use
             & Sale. Please see our Privacy Notice, our Cookies Notice and our
             Interest-Based Ads Notice.
           </p>
-          <button type="submit" onClick={signIn} className="login_signInButton">
+          <button disabled={!(email && password)} type="submit" onClick={signIn} className="login_signInButton">
             Sign In
           </button>
           <p>

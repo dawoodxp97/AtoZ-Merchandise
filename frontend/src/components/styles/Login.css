@@ -81,3 +81,8 @@ input {
   align-items: center;
   cursor: pointer;
 }
+
+.login_container > form > button:disabled{
+  cursor: not-allowed;
+  pointer-events: all !important;
+}

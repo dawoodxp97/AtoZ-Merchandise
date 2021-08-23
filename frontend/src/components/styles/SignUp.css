@@ -25,7 +25,8 @@ input {
 }
 .signup_container > h1 {
   font-weight: 500;
-  margin-bottom: 20px;
+  margin: 0;
+
 }
 
 .signup_container > form > h5 {
@@ -46,6 +47,7 @@ input {
 .signup_container > p {
   margin-top: 15px;
   font-size: 12px;
+  font-weight: bold;
 }
 
 .registerButton {
@@ -58,4 +60,9 @@ input {
   font-weight: bold;
   color: #121d25;
   cursor: pointer;
+}
+
+.signup_container > button:disabled {
+  cursor: not-allowed;
+  pointer-events: all !important;
 }

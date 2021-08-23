@@ -10,7 +10,7 @@ import axios from "../axios";
 import { db } from "../firebase";
 function Payments() {
   const history = useHistory();
-  const [{ basket, user }, dispatch] = useStateValue();
+  const [{ basket, user, address }, dispatch] = useStateValue();
   const stripe = useStripe();
   const elements = useElements();
   const [succeeded, setSucceeded] = useState(false);
@@ -87,9 +87,9 @@ function Payments() {
           </div>
           <div className="payment_address">
             <p>{user?.email}</p>
-            <p>Line 1</p>
-            <p>Line 1</p>
-            <p>Line 1</p>
+            <p>{address?.address}</p>
+            <p> {address?.city} </p>
+            <p> {address?.pincode}</p>
           </div>
         </div>
         {/* Payment section -- Review Items  */}

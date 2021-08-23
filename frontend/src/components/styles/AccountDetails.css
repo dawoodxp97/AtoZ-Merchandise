@@ -3,6 +3,18 @@ input {
   outline: none;
   border: none;
 }
+textarea{
+  background: none;
+  outline: none;
+  border: none;
+  font-weight: 550;
+  background-color: #f2f2f5;
+  height: 4rem;
+  width: 18rem;
+  border-radius: 5px;
+  filter: drop-shadow(1px 1px 2px rgb(0 0 0/0.4));
+
+}
 
 .account_details {
   color: #121d25;
@@ -39,7 +51,7 @@ input {
   border-radius: 20px;
   padding: 20px;
   width: 300px;
-  height: 250px;
+  max-height: 30rem;
   background-color: white;
 }
 .account_details_grp2 > form > input {
@@ -53,6 +65,7 @@ input {
   filter: drop-shadow(1px 1px 1px rgb(0 0 0/0.4));
 }
 .account_details_grp2 > form > button {
+  cursor: pointer;
   border: none;
   font-weight: bold;
   border-radius: 10px;
@@ -60,4 +73,75 @@ input {
   height: 28px;
   background-color: #ff9900;
   filter: drop-shadow(1px 1px 2px rgb(0 0 0/0.4));
+}
+
+.address_details{
+  border-radius: 20px;
+  padding: 20px;
+  width: 300px;
+  max-height: 30rem;
+  background-color: white;
+}
+
+
+.add_logos{
+  margin-left: 15rem;
+  margin-bottom: -2.5rem;
+  height: 1.5rem;
+  color: black;
+  width: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.add_logos > .MuiSvgIcon-root {
+  cursor: pointer;
+  filter: drop-shadow(1px 1px 1px #ff9900);
+}
+
+.modal_form{
+  color: #121d25; 
+}
+.modal_h2{
+  color: #121d25;
+}
+.modal_btn {
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-left: 10px;
+  height: 28px;
+  background-color: #ff9900;
+  filter: drop-shadow(1px 1px 2px rgb(0 0 0/0.4));
+}
+.modal_close_btn{
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-left: 25rem;
+  height: 2rem;
+  width: 2rem;
+  font-size: larger;
+  background-color: #ff9900;
+  filter: drop-shadow(1px 1px 2px rgb(0 0 0/0.4)); 
+}
+
+.modal_form > input{
+  font-weight: 550;
+  background-color: #f2f2f5;
+  height: 25px;
+  border-radius: 5px;
+  filter: drop-shadow(1px 1px 2px rgb(0 0 0/0.4));
+}
+
+.modal_form > button:disabled {
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+
+.address_form > button:disabled {
+  cursor: not-allowed;
+  pointer-events: all !important;
 }

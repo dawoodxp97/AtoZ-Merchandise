@@ -8,10 +8,14 @@ import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import { auth } from "../firebase";
 import { useStateValue } from "../StateProvider";
 function Home() {
-  const [{ user }] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
   const handleAuth = () => {
     if (user) {
       auth.signOut();
+      dispatch({
+        type: "SET_ADD",
+        address: "",
+      });
     }
   };
   return (

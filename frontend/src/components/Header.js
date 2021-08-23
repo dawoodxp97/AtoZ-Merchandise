@@ -14,7 +14,7 @@ import { useStateValue } from "../StateProvider";
 import { Link } from "react-router-dom";
 
 function Header() {
-  const [{ basket, user }] = useStateValue();
+  const [{ basket, user, address }] = useStateValue();
   const [isOpen, setOpen] = useState(false);
   return (
     <div className="header">
@@ -122,7 +122,7 @@ function Header() {
             <span className="address_child_1">
               Hello, {!user ? "Guest" : user?.displayName}{" "}
             </span>
-            <span className="address_child_2">Select your address</span>
+            <span className="address_child_2"> {!address ? "Update your address" : `Deliver to ${address?.city} - ${address?.pincode}`} </span>
           </div>
         </div>
         <div className="header_child4">

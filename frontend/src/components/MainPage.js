@@ -83,6 +83,7 @@ function MainPage() {
       <h3>Hot Deals 🔥 🔥 🔥 </h3>
       <div className="products">
         <Product
+          key="1"
           id="12321341"
           brand="HP"
           title="HP Pavilion Gaming 10th Gen Intel Core i5 Processor 16.1 (40.9 cms) FHD Gaming Laptop (8GB/1TB HDD + 256GB SSD)"
@@ -92,6 +93,7 @@ function MainPage() {
         />
 
         <Product
+          key="2"
           id="12321342"
           brand="HP"
           title="HP 22fw Ultra-Thin Full HD 21.5-inch IPS Monitor with VGA and HDMI Ports"
@@ -100,6 +102,7 @@ function MainPage() {
           image="https://images-na.ssl-images-amazon.com/images/I/71yYGgCG%2BhL._SL1500_.jpg"
         />
         <Product
+          key="3"
           id="12321343"
           brand="Apple"
           title="Apple Mac Mini (3.6GHz Quad-core 8th-Generation Intel Core i3 Processor, 8GB RAM, 256GB)"
@@ -108,6 +111,7 @@ function MainPage() {
           image="https://images-na.ssl-images-amazon.com/images/I/913HIEWEgBL._SL1500_.jpg"
         />
         <Product
+          key="4"
           id="12321344"
           brand="Samsung"
           title="Samsung Galaxy M32 (Light Blue, 4GB RAM, 64GB Storage) INR 1250 Off with ICICI Credit and Debit Cards "
@@ -116,6 +120,7 @@ function MainPage() {
           image="https://images-na.ssl-images-amazon.com/images/I/71F4jU7MRUS._SL1500_.jpg"
         />
         <Product
+          key="5"
           id="12321345"
           brand="PTron"
           title="PTron Boom Ultima V2 Dual Driver, In-Ear Headphones with in-line Mic, Volume Control, Passive Noise Cancelling."
@@ -124,6 +129,7 @@ function MainPage() {
           image="https://images-na.ssl-images-amazon.com/images/I/61KuS-yAFGL._SL1100_.jpg"
         />
         <Product
+          key="6"
           id="12321346"
           brand="Mivi"
           title="Mivi Duopods M40 True Wireless Bluetooth Earbuds with Studio Sound, Powerful Bass, 24 Hours of Battery and EarPods."
@@ -132,6 +138,7 @@ function MainPage() {
           image="https://images-na.ssl-images-amazon.com/images/I/71jjlIxu5yL._SL1500_.jpg"
         />
         <Product
+          key="7"
           id="12321347"
           brand="Inalsa"
           title="Inalsa Hand Blender| Hand Mixer|Beater - Easy Mix, Powerful 250 Watt Motor | Variable 7 Speed Control."
@@ -140,6 +147,7 @@ function MainPage() {
           image="https://images-na.ssl-images-amazon.com/images/I/61Gmi%2BQWBzL._SL1200_.jpg"
         />
         <Product
+          key="8"
           id="12321348"
           brand="Cureveda"
           title="Cureveda Plant Based Collagen Builder Glow Powder for Women & Men Skin & Hair Anti-aging Supplement Beauty Protein"
@@ -148,6 +156,7 @@ function MainPage() {
           image="https://images-na.ssl-images-amazon.com/images/I/71sN7XeyDUL._SL1500_.jpg"
         />
         <Product
+          key="9"
           id="12321349"
           brand="OZiva"
           title="OZiva Plant Based Collagen Builder (With Vitamin C, Biotin, Silica & Bamboo Shoot) for Anti-Aging Beauty"
@@ -156,6 +165,7 @@ function MainPage() {
           image="https://images-na.ssl-images-amazon.com/images/I/61CF9gr%2BhmS._SL1500_.jpg"
         />
         <Product
+          key="10"
           id="12321350"
           brand="Welcare"
           title="Welcare MAXPRO PTM405I 2HP (4 HP Peak) Motorized Auto Incline Folding Treadmill with LCD Display, Soft Cushion."
@@ -164,6 +174,7 @@ function MainPage() {
           image="https://images-na.ssl-images-amazon.com/images/I/61bpsU6h0wL._SL1500_.jpg"
         />
         <Product
+          key="11"
           id="12321351"
           brand="U.P.C"
           title="Utilite™ Smart Home Multi-Purpose Foldable Laptop Bed Table Lap Desk Stand Storage Drawer Cup Holder Slot."
@@ -172,6 +183,7 @@ function MainPage() {
           image="https://images-na.ssl-images-amazon.com/images/I/71jRDH260ZS._SL1500_.jpg"
         />
         <Product
+          key="12"
           id="12321352"
           brand="U.P.C"
           title="U.P.C. Upgraded Hands-Free Squeeze Microfiber Flat Spin Mop System 360° Flexible Head."
@@ -180,6 +192,7 @@ function MainPage() {
           image="https://images-na.ssl-images-amazon.com/images/I/41dngKExodL.jpg"
         />
         <Product
+          key="13"
           id="12321353"
           brand="TP-Link"
           title="TP-Link Archer MR600 AC1200 Mbps 4G+ Cat6 Mobile Wi-Fi Router Dual Band Wireless WiFi."
@@ -188,6 +201,7 @@ function MainPage() {
           image="https://images-na.ssl-images-amazon.com/images/I/51mJbljbumL._SL1000_.jpg"
         />
         <Product
+          key="14"
           id="12321354"
           brand="NETBOON"
           title="NETBOON 4G LTE External Barrel Antenna with LMR200 Coaxial Cable SMA-Male to N-Male 12 dBi Antenna for Router."
