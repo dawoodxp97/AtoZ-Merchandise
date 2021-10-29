@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   height: 350px;
-  width: 230px;
+  width: 260px;
   border-radius: 20px;
   color: #4a4f58;
   filter: drop-shadow(2px 2px 2px rgb(0 0 0/0.4));
@@ -54,6 +54,27 @@
   color: rgb(0, 0, 0);
   cursor: pointer;
   margin-left: 70px;
+}
+.fave_icon {
+  display: inline;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: small;
+  margin-left: -3rem;
+}
+.fave_icon:hover {
+  color: #161d25;
+  background-color: #ff9900;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+  transition: 0.1s ease-in;
+}
+.fave_icon > .MuiSvgIcon-root {
+  filter: drop-shadow(2px 2px 1px rgb(0 0 0/0.4));
 }
 .product_price {
   margin: 0;

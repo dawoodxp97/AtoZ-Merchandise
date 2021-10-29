@@ -14,6 +14,7 @@ import Payments from "./components/Payments";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import Orders from "./components/Orders";
+import Favorites from "./components/Favorites";
 
 const promise = loadStripe(
   "pk_test_51ImAEASDaBhYbeNZTOTweoeLdvltbTDvjhQGo1h3dvejzMx1NW1VAtUU30dhmFOa0W32sfMf98MpN70eZdrI62mb00Sp7AGTBZ"
@@ -41,6 +42,10 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
+          <Route path="/favorites">
+            <Header />
+            <Favorites />
+          </Route>
           <Route path="/orders">
             <Header />
             <Orders />

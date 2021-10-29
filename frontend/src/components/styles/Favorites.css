@@ -1,0 +1,16 @@
+.fav_items_grp {
+  margin: 10px;
+  padding-top: 4rem;
+  display: flex;
+  flex-flow: wrap;
+  align-content: space-around;
+  /* overflow-y: scroll; */
+  height: 100%;
+}
+.fav_grp {
+  color: black;
+  /* margin: 3rem; */
+  padding: 1rem;
+  height: 85%;
+  overflow-y: scroll;
+}

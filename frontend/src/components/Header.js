@@ -122,13 +122,27 @@ function Header() {
             <span className="address_child_1">
               Hello, {!user ? "Guest" : user?.displayName}{" "}
             </span>
-            <span className="address_child_2"> {!address ? "Update your address" : `Deliver to ${address?.city} - ${address?.pincode}`} </span>
+            <span className="address_child_2">
+              {" "}
+              {!address
+                ? "Update your address"
+                : `Deliver to ${address?.city} - ${address?.pincode}`}{" "}
+            </span>
           </div>
         </div>
+
         <div className="header_child4">
-          <div className="fav_icon">
-            <FavoriteBorderOutlinedIcon />
-          </div>
+          <Link
+            to="/favorites"
+            style={{
+              textDecoration: "none",
+              color: "white",
+            }}
+          >
+            <div className="fav_icon">
+              <FavoriteBorderOutlinedIcon />
+            </div>
+          </Link>
           <Link to="/checkout">
             <div className="cart_grp">
               <Badge badgeContent={basket?.length} color="primary">
