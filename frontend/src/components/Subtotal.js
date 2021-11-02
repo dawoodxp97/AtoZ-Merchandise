@@ -23,7 +23,7 @@ function Subtotal() {
               disabled={!basket?.length || !user}
               onClick={(e) => history.push("/payments")}
             >
-              Proceed to Checkout
+              {user ? "Proceed to Checkout" : "Please login to checkout"}
             </button>
           </>
         )}

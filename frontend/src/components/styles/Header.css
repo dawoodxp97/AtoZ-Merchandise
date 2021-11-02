@@ -24,6 +24,18 @@
   display: flex;
   align-items: center;
 }
+.search_content {
+  background-color: #fafafa;
+  top: 3.5rem;
+  position: fixed;
+  height: 20rem;
+  border-radius: 0.5rem;
+  width: 36rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: block;
+  padding: 1rem;
+  overflow-y: scroll;
+}
 .header_child3 {
   flex: 0.15;
   height: 40px;
@@ -180,6 +192,7 @@
   height: 30px;
   width: 95%;
   margin-left: 10px;
+  position: relative;
 }
 .form_input_mb {
   text-decoration: none;

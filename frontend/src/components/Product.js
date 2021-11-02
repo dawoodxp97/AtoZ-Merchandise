@@ -5,11 +5,22 @@ import "./styles/Product.css";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import FavoriteBorderOutlinedIcon from "@material-ui/icons/FavoriteBorderOutlined";
 import { db } from "../firebase";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+toast.configure();
 
 function Product({ id, title, image, price, rating, brand, uid }) {
   const [favData, setFavData] = useState([]);
   const history = useHistory();
   const [{ basket, user }, dispatch] = useStateValue();
+
+  const notify = (text) => {
+    toast.success(`🚀 ${text}... `, { autoClose: 2000 });
+  };
+  const notifyWarn = (text) => {
+    toast.warn(`🚀 ${text}... `, { autoClose: 2000 });
+  };
   useEffect(() => {
     db.collection("users")
       .doc(user?.uid)
@@ -39,9 +50,9 @@ function Product({ id, title, image, price, rating, brand, uid }) {
         brand: brand,
       },
     });
+    notify(`${title} added to Cart`);
   };
   const removeFav = () => {
-    console.log("fav removed");
     db.collection("users")
       .doc(user?.uid)
       .collection("favorites")
@@ -49,29 +60,36 @@ function Product({ id, title, image, price, rating, brand, uid }) {
       .delete()
       .then(() => {
         //deleted
+        notify(`Removed`);
       })
       .catch((err) => console.log(err));
   };
   const addFav = () => {
-    db.collection("users")
-      .doc(user?.uid)
-      .collection("favorites")
-      .doc(uid)
-      .set(
-        {
-          id: id,
-          title: title,
-          image: image,
-          price: price,
-          rating: rating,
-          brand: brand,
-        },
-        { merge: true }
-      )
-      .then(() => {
-        //added
-      })
-      .catch((err) => console.log(err));
+    if (user) {
+      db.collection("users")
+        .doc(user?.uid)
+        .collection("favorites")
+        .doc(uid)
+        .set(
+          {
+            id: id,
+            title: title,
+            image: image,
+            price: price,
+            rating: rating,
+            brand: brand,
+          },
+          { merge: true }
+        )
+        .then(() => {
+          //added
+          notify(`Added to Favorites`);
+        })
+        .catch((err) => console.log(err));
+    } else {
+      //ioej
+      notifyWarn(`You must login to Add to Favorites`);
+    }
   };
   return (
     <div className="products_grp">
