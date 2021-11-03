@@ -28,14 +28,14 @@ AtoZ-Merchandise is a Full Stack E-Commerce Application with complete functional
 - Checkout Flow <img src="https://cdn.iconscout.com/icon/premium/png-64-thumb/checkout-2629926-2175631.png" width="25"/> - Able to make Real-Time payments using <img src="https://img.shields.io/badge/Stripe.com-1ED760?&style=for-the-badge&logo=stripe&logoColor=white" width="10%"/>
 - User Authentication <img src="https://img.shields.io/badge/firebase-FFFF00?&style=for-the-badge&logo=firebase&logoColor=black" width="10%" height="20"/> (SignIn, SignUp with Email & Password and  Google Auth).
 - Save Ordered Product Details in Database for specific User.
-- Address Input.
+- Address Management.
 - Have all CRUD operations for address details.
+- Product Search.
 
 <br>
 
 # Upcoming Features:
 - Product Categorization.
-- Product Search.
 - Responsive UI.
 
 <br>
