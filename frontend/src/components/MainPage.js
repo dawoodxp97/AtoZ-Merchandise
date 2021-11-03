@@ -15,8 +15,10 @@ import vc10 from "./images/vgame.png";
 import vc11 from "./images/vsofa.png";
 import { Tooltip } from "@material-ui/core";
 import { db } from "../firebase";
+import { useStateValue } from "../StateProvider";
 
 function MainPage() {
+  const [, dispatch] = useStateValue();
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -27,10 +29,15 @@ function MainPage() {
           data: doc.data(),
         }))
       );
+      dispatch({
+        type: "SET_ALLDATA",
+        allData: snapshot.docs.map((doc) => doc.data()),
+      });
     });
     return () => {
       //cleanup
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
