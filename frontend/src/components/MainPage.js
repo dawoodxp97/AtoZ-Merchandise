@@ -18,7 +18,7 @@ import { db } from "../firebase";
 import { useStateValue } from "../StateProvider";
 
 function MainPage() {
-  const [, dispatch] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -39,6 +39,17 @@ function MainPage() {
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  useEffect(() => {
+    db.collection("users")
+      .doc(user?.uid)
+      .collection("basket")
+      .onSnapshot((snapshot) => {
+        dispatch({
+          type: "SET_CART",
+          basket: snapshot.docs.map((doc) => doc.data()),
+        });
+      });
+  }, [dispatch, user?.uid]);
 
   return (
     <div className="mainpage">

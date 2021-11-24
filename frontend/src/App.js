@@ -9,7 +9,6 @@ import { useStateValue } from "./StateProvider";
 import { auth } from "./firebase";
 import Checkout from "./components/Checkout";
 import AccountDetails from "./components/AccountDetails";
-import SecNav from "./components/SecNav";
 import Payments from "./components/Payments";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
@@ -72,7 +71,6 @@ function App() {
           </Route>
           <Route path="/">
             <Header />
-            <SecNav />
             <Home />
           </Route>
         </Switch>

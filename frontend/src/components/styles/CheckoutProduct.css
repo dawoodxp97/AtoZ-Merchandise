@@ -31,3 +31,34 @@
   font-size: 17px;
   font-weight: 700;
 }
+.product_increment_grp {
+  width: 8rem;
+  height: 3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.product_increment {
+  background-color: #ff9900;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  font-weight: bold;
+  cursor: pointer;
+}
+.product_decrement {
+  background-color: #ff9900;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  font-weight: bold;
+  cursor: pointer;
+}

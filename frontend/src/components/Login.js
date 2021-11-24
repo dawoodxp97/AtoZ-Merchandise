@@ -20,6 +20,7 @@ function Login() {
         alert(error.message);
       });
   };
+
   const googleAuth = () => {
     auth
       .signInWithPopup(provider)
@@ -45,12 +46,10 @@ function Login() {
       </Link>
       <div className="login_container">
         <h1>Sign-in</h1>
-
         <form>
           <h5>E-mail</h5>
           <input
             type="text"
-            multiple
             value={email}
             onChange={(e) => setEmail(e.target.value.trimStart())}
           />
@@ -65,7 +64,12 @@ function Login() {
             & Sale. Please see our Privacy Notice, our Cookies Notice and our
             Interest-Based Ads Notice.
           </p>
-          <button disabled={!(email && password)} type="submit" onClick={signIn} className="login_signInButton">
+          <button
+            disabled={!(email && password)}
+            type="submit"
+            onClick={signIn}
+            className="login_signInButton"
+          >
             Sign In
           </button>
           <p>
@@ -82,6 +86,15 @@ function Login() {
             </Link>
           </p>
         </form>
+        <p
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            setEmail("tester@test.in");
+            setPassword("tester@12345");
+          }}
+        >
+          Guest Login
+        </p>
       </div>
       <div onClick={googleAuth} className="other_auth">
         <img src={logo} alt="" />

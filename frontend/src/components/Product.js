@@ -39,18 +39,46 @@ function Product({ id, title, image, price, rating, brand, uid }) {
   }, [user?.uid]);
 
   const addToBasket = () => {
-    dispatch({
-      type: "ADD_TO_BASKET",
-      item: {
-        id: id,
-        title: title,
-        image: image,
-        price: price,
-        rating: rating,
-        brand: brand,
-      },
-    });
-    notify(`${title} added to Cart`);
+    if (user) {
+      const basketDocRef = db
+        .collection("users")
+        .doc(user?.uid)
+        .collection("basket")
+        .doc();
+      basketDocRef
+        .set(
+          {
+            id: id,
+            title: title,
+            image: image,
+            price: price,
+            rating: rating,
+            brand: brand,
+            amount: price,
+            count: 1,
+            uid: basketDocRef.id,
+          },
+          { merge: true }
+        )
+        .then(() => {
+          //added
+          notify(`${title} added to Cart`);
+        })
+        .catch((err) => console.log(err));
+    } else {
+      dispatch({
+        type: "ADD_TO_BASKET",
+        item: {
+          id: id,
+          title: title,
+          image: image,
+          price: price,
+          amount: price,
+          rating: rating,
+          brand: brand,
+        },
+      });
+    }
   };
   const removeFav = () => {
     db.collection("users")

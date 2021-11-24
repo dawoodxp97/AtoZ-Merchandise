@@ -55,6 +55,19 @@ function Payments() {
         dispatch({
           type: "EMPTY_BASKET",
         });
+        db.collection("users")
+          .doc(user?.uid)
+          .collection("basket")
+          .onSnapshot((snapshot) => {
+            snapshot.docs.map((doc) =>
+              db
+                .collection("users")
+                .doc(user?.uid)
+                .collection("basket")
+                .doc(doc.id)
+                .delete()
+            );
+          });
         history.replace("/orders");
       });
   };
@@ -100,11 +113,14 @@ function Payments() {
           <div className="payment_items">
             {basket.map((item) => (
               <CheckoutProduct
+                key={item.id}
                 id={item.id}
                 title={item.title}
                 image={item.image}
                 price={item.price}
                 rating={item.rating}
+                amount={item.amount}
+                hideIncrement={true}
               />
             ))}
           </div>
@@ -129,6 +145,10 @@ function Payments() {
                 <button disabled={processing || disabled || succeeded}>
                   <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
                 </button>
+                <p>
+                  Note: For Test Card Credentials Enter 42 frequently until it
+                  fills all fields
+                </p>
               </div>
               {error && <div>{error}</div>}
             </form>

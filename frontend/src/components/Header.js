@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useHistory } from "react-router-dom";
+import { db } from "../firebase";
 
 toast.configure();
 
@@ -51,21 +52,63 @@ function Header() {
   const notify = (text) => {
     toast.success(`🚀 ${text}... `, { autoClose: 2000 });
   };
-
   const addToBasket = (data) => {
-    dispatch({
-      type: "ADD_TO_BASKET",
-      item: {
-        id: data?.id,
-        title: data?.title,
-        image: data?.image,
-        price: data?.price,
-        rating: data?.rating,
-        brand: data?.brand,
-      },
-    });
-    notify(`${data?.title?.substring(0, 20)} added to Cart`);
+    if (user) {
+      const basketDocRef = db
+        .collection("users")
+        .doc(user?.uid)
+        .collection("basket")
+        .doc();
+      basketDocRef
+        .set(
+          {
+            id: data?.id,
+            title: data?.title,
+            image: data?.image,
+            price: data?.price,
+            rating: data?.rating,
+            brand: data?.brand,
+            amount: data?.price,
+            count: 1,
+            uid: basketDocRef.id,
+          },
+          { merge: true }
+        )
+        .then(() => {
+          //added
+          notify(`${data?.title?.substring(0, 20)} added to Cart`);
+        })
+        .catch((err) => console.log(err));
+    } else {
+      dispatch({
+        type: "ADD_TO_BASKET",
+        item: {
+          id: data?.id,
+          title: data?.title,
+          image: data?.image,
+          price: data?.price,
+          amount: data?.price,
+          rating: data?.rating,
+          brand: data?.brand,
+        },
+      });
+    }
   };
+
+  // const addToBasket = (data) => {
+  //   dispatch({
+  //     type: "ADD_TO_BASKET",
+  //     item: {
+  //       id: data?.id,
+  //       title: data?.title,
+  //       image: data?.image,
+  //       price: data?.price,
+  //       rating: data?.rating,
+  //       brand: data?.brand,
+  //     },
+  //   });
+  //   notify(`${data?.title?.substring(0, 20)} added to Cart`);
+  // };
   return (
     <div className="header">
       <div className="header_res">
@@ -121,6 +164,11 @@ function Header() {
           <input
             ref={inputElem}
             onFocus={displaySearch}
+            onBlur={() => {
+              if (searchedItems.length === 0) {
+                hideSearch();
+              }
+            }}
             onChange={getSearch}
             placeholder="Search..."
             type="text"
