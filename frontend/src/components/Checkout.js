@@ -10,9 +10,9 @@ function Checkout() {
       <div className="checkout_left">
         <div>
           <h3>Hello, {user?.displayName}</h3>
-          <h2 className="checkout_title">Your Shopping Cart</h2>
+          <h2 className="checkout_title">Your Shopping Cart:</h2>
           {!basket.length ? (
-            ""
+            <h4>No Items in Cart</h4>
           ) : (
             <div className="basket_items">
               {basket.map((item) => (

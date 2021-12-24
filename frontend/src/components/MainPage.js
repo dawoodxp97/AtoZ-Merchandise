@@ -56,9 +56,9 @@ function MainPage() {
       <div className="slide">
         <Slider />
       </div>
-      <h3 id="cat_head">Popular Categories</h3>
+      {/* <h3 id="cat_head">Popular Categories</h3> */}
 
-      <div className="prod_head">
+      {/* <div className="prod_head">
         <Tooltip title="Camera" placement="bottom">
           <div>
             <img className="vector_icons" src={vc1} alt="" />
@@ -114,7 +114,7 @@ function MainPage() {
             <img className="vector_icons" src={vc11} alt="" />
           </div>
         </Tooltip>
-      </div>
+      </div> */}
       <h3>Hot Deals 🔥 🔥 🔥 </h3>
       <div className="products">
         {data &&

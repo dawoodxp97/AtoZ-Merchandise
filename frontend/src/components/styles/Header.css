@@ -1,13 +1,10 @@
 .header {
   background-color: #161d25;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  height: 100%;
+  width: 100%;
 }
-.header_mobile {
-  display: none;
-}
+
 .header_res {
-  height: 10%;
   width: 100%;
   display: flex;
   align-items: center;

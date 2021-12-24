@@ -3,21 +3,27 @@ import "./styles/Login.css";
 import logo from "./images/icons8-google-48.png";
 import { Link, useHistory } from "react-router-dom";
 import { auth, provider } from "../firebase";
+import ClipLoader from "react-spinners/ClipLoader";
+
 function Login() {
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
   const signIn = (e) => {
     e.preventDefault();
+    setLoading(true);
     auth
       .signInWithEmailAndPassword(email, password)
       .then((auth) => {
         if (auth) {
+          setLoading(false);
           history.push("/");
         }
       })
       .catch((error) => {
         alert(error.message);
+        setLoading(false);
       });
   };
 
@@ -65,12 +71,16 @@ function Login() {
             Interest-Based Ads Notice.
           </p>
           <button
-            disabled={!(email && password)}
+            disabled={!(email && password) || loading}
             type="submit"
             onClick={signIn}
             className="login_signInButton"
           >
-            Sign In
+            {loading ? (
+              <ClipLoader color="#161d25" loading={true} size={12} />
+            ) : (
+              "Sign In"
+            )}
           </button>
           <p>
             Don't have account ?

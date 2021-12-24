@@ -1,6 +1,5 @@
 .payments {
-  height: 90%;
-  overflow: scroll;
+  height: 100%;
   color: black;
 }
 .payment {
@@ -12,6 +11,8 @@
   border-bottom: 1px solid lightgray;
 }
 .payment_container {
+  height: 88vh;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   margin: 5px 5px 5px 5px;
@@ -20,6 +21,7 @@
   display: flex;
   margin: 15px 15px 15px 15px;
   border-bottom: 1px solid lightgray;
+  padding-bottom: 0.5rem;
 }
 .payment_title {
   flex: 0.2;
@@ -30,7 +32,8 @@
 .payment_items {
   flex: 0.8;
   background-color: white;
-  padding: 15px;
+  height: auto;
+  padding: 10px;
   border-radius: 15px;
   filter: drop-shadow(0px 0px 2px rgb(0 0 0/0.4));
 }

@@ -1,6 +1,6 @@
 import React from "react";
-import { Slide } from "react-slideshow-image";
-import "react-slideshow-image/dist/styles.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 import "./styles/Slide.css";
 import img0 from "./images/img0.png";
 import img1 from "./images/img1.jpg";
@@ -10,39 +10,32 @@ import img4 from "./images/img4.jpg";
 import img5 from "./images/img5.jpg";
 const Slider = () => {
   return (
-    <div>
-      <Slide easing="ease">
-        <div className="each-slide">
-          <div className="slide_1">
-            <img src={img0} alt="pics" />
-          </div>
+    <div className="slider_comp">
+      <Carousel
+        showStatus={false}
+        infiniteLoop={true}
+        autoPlay={true}
+        showThumbs={false}
+      >
+        <div>
+          <img className="slider_img" src={img0} alt="" />
         </div>
-        <div className="each-slide">
-          <div className="slide_2">
-            <img src={img1} alt="pics" />
-          </div>
+        <div>
+          <img className="slider_img" src={img1} alt="" />
         </div>
-        <div className="each-slide">
-          <div className="slide_3">
-            <img src={img2} alt="pics" />
-          </div>
+        <div>
+          <img className="slider_img" src={img2} alt="" />
         </div>
-        <div className="each-slide">
-          <div className="slide_4">
-            <img src={img3} alt="pics" />
-          </div>
+        <div>
+          <img className="slider_img" src={img3} alt="" />
         </div>
-        <div className="each-slide">
-          <div className="slide_5">
-            <img src={img4} alt="pics" />
-          </div>
+        <div>
+          <img className="slider_img" src={img4} alt="" />
         </div>
-        <div className="each-slide">
-          <div className="slide_6">
-            <img src={img5} alt="pics" />
-          </div>
+        <div>
+          <img className="slider_img" src={img5} alt="" />
         </div>
-      </Slide>
+      </Carousel>
     </div>
   );
 };

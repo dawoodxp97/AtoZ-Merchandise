@@ -1,7 +1,7 @@
 .checkout {
   display: flex;
   color: #161d25;
-  height: 90%;
+  height: 100%;
   margin-left: 10px;
   background-color: #f2f2f5;
   border-bottom-left-radius: 20px;
@@ -9,6 +9,7 @@
 }
 .checkout_left {
   flex: 0.7;
+  height: 90vh;
   border-radius: 20px;
   overflow-y: scroll;
   display: flex;

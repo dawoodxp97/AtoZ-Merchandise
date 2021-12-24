@@ -1,20 +1,19 @@
+.mainpage {
+  height: 90vh;
+  width: 100%;
+  overflow-y: scroll;
+}
 .products {
-  margin: 10px;
-  padding-top: 25px;
   display: flex;
   flex-flow: wrap;
   align-content: space-around;
-  /* overflow-y: scroll; */
-  height: 100%;
 }
 .slide {
   height: 200px;
   width: 100%;
 }
 .slider {
-  /* background-color: blue; */
   width: 60%;
-
   height: 90%;
 }
 

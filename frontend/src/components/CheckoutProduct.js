@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { db } from "../firebase";
 import { useStateValue } from "../StateProvider";
 import "./styles/CheckoutProduct.css";
@@ -19,7 +19,7 @@ function CheckoutProduct({
   uid,
   count,
 }) {
-  const [{ user }] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
   const notify = (text) => {
     toast.success(`🚀 ${text}... `, { autoClose: 2000 });
   };
@@ -82,12 +82,19 @@ function CheckoutProduct({
     );
   };
   const removeFromBasket = () => {
-    basketDocRef
-      .delete()
-      .then(() => {
-        //Item Deleted
-      })
-      .catch((err) => console.log(err));
+    if (user) {
+      basketDocRef
+        .delete()
+        .then(() => {
+          //Item Deleted
+        })
+        .catch((err) => console.log(err));
+    } else {
+      dispatch({
+        type: "REMOVE_FROM_BASKET",
+        id: id,
+      });
+    }
   };
   return (
     <div className="checkoutProduct">

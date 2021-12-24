@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import "./App.css";
-import Header from "./components/Header";
-import Home from "./components/Home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
@@ -14,8 +12,12 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import Orders from "./components/Orders";
 import Favorites from "./components/Favorites";
+import Layout from "./components/Layout";
+import MainPage from "./components/MainPage";
+import CategoryDetails from "./components/CategoryDetails";
+import PaymentsPage from "./components/PaymentsPage";
 
-const promise = loadStripe(
+export const promise = loadStripe(
   "pk_test_51ImAEASDaBhYbeNZTOTweoeLdvltbTDvjhQGo1h3dvejzMx1NW1VAtUU30dhmFOa0W32sfMf98MpN70eZdrI62mb00Sp7AGTBZ"
 );
 
@@ -41,38 +43,17 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/favorites">
-            <Header />
-            <Favorites />
-          </Route>
-          <Route path="/orders">
-            <Header />
-            <Orders />
-          </Route>
-          <Route path="/payments">
-            <Header />
-            <Elements stripe={promise}>
-              <Payments />
-            </Elements>
-          </Route>
-          <Route path="/account">
-            <Header />
-            <AccountDetails />
-          </Route>
-          <Route path="/checkout">
-            <Header />
-            <Checkout />
-          </Route>
-          <Route path="/register">
-            <SignUp />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/">
-            <Header />
-            <Home />
-          </Route>
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={SignUp} />
+          <Layout>
+            <Route exact path="/" component={MainPage} />
+            <Route path="/favorites" component={Favorites} />
+            <Route path="/orders" component={Orders} />
+            <Route path="/account" component={AccountDetails} />
+            <Route path="/checkout" component={Checkout} />
+            <Route path="/detail/:type" component={CategoryDetails} />
+            <Route path="/payments" component={PaymentsPage} />
+          </Layout>
         </Switch>
       </Router>
     </div>

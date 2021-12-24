@@ -1,0 +1,79 @@
+.sidebar {
+  height: 100%;
+  width: 100%;
+  background-color: #161d25;
+  border-top: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar_items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 8%;
+  margin-left: 10%;
+  flex: 0.9;
+}
+
+.logout {
+  flex: 0.1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.logout > p {
+  font-weight: 600;
+}
+.sidebar_items_head {
+  height: 30px;
+  width: 90%;
+  background-color: #2d3c4c;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 10px;
+  color: #ff9900;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+}
+.sidebar_items_head > .MuiSvgIcon-root {
+  padding-left: 8px;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+}
+.sidebar_items_head > h4 {
+  padding-left: 5px;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+}
+.sidebar_sub_items_body {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12%;
+}
+.sidebar_sub_item {
+  height: 25px;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 0.7rem;
+  color: #ccced0;
+  cursor: pointer;
+}
+.sidebar_sub_item > h6 {
+  margin-left: 15px;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+}
+.sidebar_sub_item:hover {
+  color: #000000;
+  background-color: #ff9900;
+  transition: 0.1s ease-in-out;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0/0.4));
+}
+
+#logout_logo {
+  height: 20px;
+  width: 20px;
+  margin-left: -10px;
+  margin-right: 5px;
+}

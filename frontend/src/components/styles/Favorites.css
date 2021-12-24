@@ -1,16 +1,14 @@
 .fav_items_grp {
-  margin: 10px;
-  padding-top: 4rem;
   display: flex;
   flex-flow: wrap;
-  align-content: space-around;
-  /* overflow-y: scroll; */
-  height: 100%;
+  overflow-y: scroll;
+  height: 70vh;
+  padding-top: 0.5rem;
 }
 .fav_grp {
   color: black;
   /* margin: 3rem; */
   padding: 1rem;
-  height: 85%;
+  height: 90%;
   overflow-y: scroll;
 }

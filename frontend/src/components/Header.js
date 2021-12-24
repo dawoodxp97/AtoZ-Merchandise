@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import "./styles/Header.css";
 import FavoriteBorderOutlinedIcon from "@material-ui/icons/FavoriteBorderOutlined";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
-import NotificationsNoneOutlinedIcon from "@material-ui/icons/NotificationsNoneOutlined";
 import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
 import SearchIcon from "@material-ui/icons/Search";
 import SettingsIcon from "@material-ui/icons/Settings";
@@ -225,10 +224,6 @@ function Header() {
               </Badge>
             </div>
           </Link>
-
-          <div className="bell_icon">
-            <NotificationsNoneOutlinedIcon />
-          </div>
           <Link
             to="/orders"
             style={{

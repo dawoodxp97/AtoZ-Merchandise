@@ -28,6 +28,7 @@ function Orders() {
     <div className="orders">
       <h1>Your Orders</h1>
       <div className="orders_order">
+        {orders.length === 0 ? <h4>No Orders yet</h4> : ""}
         {orders?.map((order) => (
           <Order key={order?.id} order={order} />
         ))}

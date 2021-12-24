@@ -27,6 +27,7 @@ function Favorites() {
     <div className="fav_grp">
       <h1>Your Favorites</h1>
       <div className="fav_items_grp">
+        {data.length === 0 ? <h4>No Favorite Products Added</h4> : ""}
         {data?.map((item) => (
           <Product
             uid={item?.id}

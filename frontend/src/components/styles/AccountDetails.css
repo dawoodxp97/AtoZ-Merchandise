@@ -3,7 +3,7 @@ input {
   outline: none;
   border: none;
 }
-textarea{
+textarea {
   background: none;
   outline: none;
   border: none;
@@ -13,13 +13,13 @@ textarea{
   width: 18rem;
   border-radius: 5px;
   filter: drop-shadow(1px 1px 2px rgb(0 0 0/0.4));
-
 }
 
 .account_details {
   color: #121d25;
   display: flex;
   align-items: center;
+  height: 100%;
 }
 .account_details_grp1 {
   border-radius: 15px;
@@ -27,7 +27,8 @@ textarea{
   margin: 15px;
   flex: 0.6;
   background-color: white;
-  height: 500px;
+  height: 80vh;
+  overflow-y: scroll;
   filter: drop-shadow(1px 1px 2px rgb(0 0 0/0.4));
 }
 .account_details_grp1 > h3 {
@@ -40,7 +41,7 @@ textarea{
   flex: 0.4;
   filter: drop-shadow(1px 1px 2px rgb(0 0 0/0.4));
 }
-.account_details_grp1 > img {
+.profile_img {
   height: 250px;
   width: 250px;
   border-radius: 130px;
@@ -75,7 +76,7 @@ textarea{
   filter: drop-shadow(1px 1px 2px rgb(0 0 0/0.4));
 }
 
-.address_details{
+.address_details {
   border-radius: 20px;
   padding: 20px;
   width: 300px;
@@ -83,8 +84,7 @@ textarea{
   background-color: white;
 }
 
-
-.add_logos{
+.add_logos {
   margin-left: 15rem;
   margin-bottom: -2.5rem;
   height: 1.5rem;
@@ -99,10 +99,10 @@ textarea{
   filter: drop-shadow(1px 1px 1px #ff9900);
 }
 
-.modal_form{
-  color: #121d25; 
+.modal_form {
+  color: #121d25;
 }
-.modal_h2{
+.modal_h2 {
   color: #121d25;
 }
 .modal_btn {
@@ -115,7 +115,7 @@ textarea{
   background-color: #ff9900;
   filter: drop-shadow(1px 1px 2px rgb(0 0 0/0.4));
 }
-.modal_close_btn{
+.modal_close_btn {
   cursor: pointer;
   border: none;
   font-weight: bold;
@@ -125,10 +125,10 @@ textarea{
   width: 2rem;
   font-size: larger;
   background-color: #ff9900;
-  filter: drop-shadow(1px 1px 2px rgb(0 0 0/0.4)); 
+  filter: drop-shadow(1px 1px 2px rgb(0 0 0/0.4));
 }
 
-.modal_form > input{
+.modal_form > input {
   font-weight: 550;
   background-color: #f2f2f5;
   height: 25px;
